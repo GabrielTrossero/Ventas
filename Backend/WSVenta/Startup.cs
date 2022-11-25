@@ -15,6 +15,8 @@ namespace WSVenta
 {
     public class Startup
     {
+        readonly string MiCors = "MiCors";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -26,6 +28,15 @@ namespace WSVenta
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MiCors,
+                                  builder =>
+                                  {
+                                      builder.WithOrigins("*");
+                                  });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +46,8 @@ namespace WSVenta
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(MiCors);
 
             app.UseHttpsRedirection();
 

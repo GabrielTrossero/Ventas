@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, ClienteComponent],
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatSidenavModule,
     HttpClientModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

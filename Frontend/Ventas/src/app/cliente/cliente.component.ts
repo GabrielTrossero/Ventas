@@ -8,8 +8,11 @@ import { ApiClienteService } from '../services/api-cliente.service';
 })
 export class ClienteComponent {
   listClientes: any[];
+  public columnas: string[];
+
   constructor(private apiCliente: ApiClienteService) {
     this.listClientes = [];
+    this.columnas = ['id', 'nombre'];
   }
 
   ngOnInit() {

@@ -1,7 +1,15 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Cliente } from '../models/cliente';
 import { Response } from '../models/response';
+
+//para agregar en el encabezado de las solicitudes (en vez de ponerlo en Postman)
+const httpOption = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json',
+  }),
+};
 
 @Injectable({
   providedIn: 'root',
@@ -13,5 +21,9 @@ export class ApiClienteService {
 
   getClientes(): Observable<Response> {
     return this.httpClient.get<Response>(this.myAppUrl);
+  }
+
+  add(cliente: Cliente): Observable<Response> {
+    return this.httpClient.post<Response>(this.myAppUrl, cliente, httpOption);
   }
 }

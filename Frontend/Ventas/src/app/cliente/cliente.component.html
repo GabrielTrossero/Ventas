@@ -1,4 +1,7 @@
 <div>
+  <button mat-raised-button color="primary" (click)="onClick()">Nuevo</button>
+</div>
+<div>
   <table mat-table [dataSource]="listClientes" class="mat-elevation-z4">
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef>#</th>

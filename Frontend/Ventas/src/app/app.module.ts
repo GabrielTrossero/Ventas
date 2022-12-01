@@ -8,10 +8,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DialogClienteComponent } from './cliente/dialog/dialog.cliente.component';
 import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ClienteComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ClienteComponent,
+    DialogClienteComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -19,6 +30,11 @@ import { MatTableModule } from '@angular/material/table';
     MatSidenavModule,
     HttpClientModule,
     MatTableModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatInputModule,
+    MatSnackBarModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

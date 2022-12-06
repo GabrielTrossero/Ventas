@@ -26,4 +26,13 @@ export class ApiClienteService {
   add(cliente: Cliente): Observable<Response> {
     return this.httpClient.post<Response>(this.myAppUrl, cliente, httpOption);
   }
+
+  update(cliente: Cliente): Observable<Response> {
+    return this.httpClient.put<Response>(this.myAppUrl, cliente, httpOption);
+  }
+
+  delete(id: number): Observable<Response> {
+    console.log(this.myAppUrl + id);
+    return this.httpClient.delete<Response>(this.myAppUrl + '/' + id);
+  }
 }

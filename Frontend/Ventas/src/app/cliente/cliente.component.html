@@ -13,6 +13,20 @@
       <td mat-cell *matCellDef="let cliente">{{ cliente.nombre }}</td>
     </ng-container>
 
+    <ng-container matColumnDef="accion">
+      <th mat-header-cell *matHeaderCellDef>Acción</th>
+      <td mat-cell *matCellDef="let cliente">
+        <button mat-raised-button color="basic" (click)="onUpdate(cliente)">
+          Editar
+        </button>
+        |
+        <button mat-raised-button color="warn" (click)="onDelete(cliente)">
+          Eliminar
+        </button>
+      </td>
+    </ng-container>
+
+    <!--donde se generan y listan las columnas-->
     <tr mat-header-row *matHeaderRowDef="columnas"></tr>
     <tr mat-row *matRowDef="let myRowData; columns: columnas"></tr>
   </table>

@@ -36,6 +36,7 @@ namespace WSVenta
                                   {
                                       builder.WithHeaders("*");
                                       builder.WithOrigins("*");
+                                      builder.WithMethods("*");
                                   });
             });
         }

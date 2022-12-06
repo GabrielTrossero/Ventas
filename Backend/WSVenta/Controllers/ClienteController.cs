@@ -57,6 +57,55 @@ namespace WSVenta.Controllers
 
             return Ok(oRespuesta);
         }
+
+
+        [HttpPut]
+        public IActionResult Update(ClientRequest oModel)
+        {
+            Respuesta oRespuesta = new Respuesta();
+            try
+            {
+                using (VentaRealContext db = new VentaRealContext())
+                {
+                    Cliente oCliente = db.Cliente.Find(oModel.Id);
+                    oCliente.Nombre = oModel.Nombre;
+                    db.Entry(oCliente).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                    db.SaveChanges();
+                    oRespuesta.Exito = 1;
+                }
+            }
+            catch (System.Exception ex)
+            {
+                oRespuesta.Exito = 0;
+                oRespuesta.Mensaje = ex.Message;
+            }
+
+            return Ok(oRespuesta);
+        }
+
+
+        [HttpDelete("{Id}")]
+        public IActionResult Delete(long Id)
+        {
+            Respuesta oRespuesta = new Respuesta();
+            try
+            {
+                using (VentaRealContext db = new VentaRealContext())
+                {
+                    Cliente oCliente = db.Cliente.Find(Id);
+                    db.Remove(oCliente);
+                    db.SaveChanges();
+                    oRespuesta.Exito = 1;
+                }
+            }
+            catch (System.Exception ex)
+            {
+                oRespuesta.Exito = 0;
+                oRespuesta.Mensaje = ex.Message;
+            }
+
+            return Ok(oRespuesta);
+        }
     }
 
 }

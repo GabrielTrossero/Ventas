@@ -4,11 +4,13 @@ using System.Linq;
 using WSVenta.Models;
 using WSVenta.Models.Response;
 using WSVenta.Models.Request;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WSVenta.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize] //esto permite que solo los que tienen token puedan hacer peticiones
     public class ClienteController : ControllerBase
     {
         [HttpGet]

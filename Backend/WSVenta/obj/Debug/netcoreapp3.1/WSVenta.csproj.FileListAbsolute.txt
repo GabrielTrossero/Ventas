@@ -100,3 +100,11 @@ D:\Gabi\Cursos\Angular + CSharp\WSVenta\Backend\WSVenta\obj\Debug\netcoreapp3.1\
 D:\Gabi\Cursos\Angular + CSharp\WSVenta\Backend\WSVenta\obj\Debug\netcoreapp3.1\WSVenta.dll
 D:\Gabi\Cursos\Angular + CSharp\WSVenta\Backend\WSVenta\obj\Debug\netcoreapp3.1\WSVenta.pdb
 D:\Gabi\Cursos\Angular + CSharp\WSVenta\Backend\WSVenta\obj\Debug\netcoreapp3.1\WSVenta.genruntimeconfig.cache
+D:\Gabi\Cursos\Angular + CSharp\WSVenta\Backend\WSVenta\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Gabi\Cursos\Angular + CSharp\WSVenta\Backend\WSVenta\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Gabi\Cursos\Angular + CSharp\WSVenta\Backend\WSVenta\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Gabi\Cursos\Angular + CSharp\WSVenta\Backend\WSVenta\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\Gabi\Cursos\Angular + CSharp\WSVenta\Backend\WSVenta\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Gabi\Cursos\Angular + CSharp\WSVenta\Backend\WSVenta\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Gabi\Cursos\Angular + CSharp\WSVenta\Backend\WSVenta\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Gabi\Cursos\Angular + CSharp\WSVenta\Backend\WSVenta\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
